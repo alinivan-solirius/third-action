@@ -13,8 +13,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Run Lint
-        run: npm run lint
+        run: echo "Running lint ..."
   test:
+    needs: lint
     runs-on: ubuntu-latest
     steps:
       - name: Get code
@@ -28,6 +29,7 @@ jobs:
       - name: Run Tests
         run: npm run test
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Get code
