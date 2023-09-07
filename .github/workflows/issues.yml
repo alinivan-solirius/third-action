@@ -4,7 +4,7 @@ on:
     type: [opened, edited, milestoned]
 jobs:
   info:
-  runs-on: ubuntu-lastest
+  runs-on: ubuntu-latest
   steps:
     - name: Event Details
       run: echo "Issues event details ..."
