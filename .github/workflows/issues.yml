@@ -7,4 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Event Details
-        run: echo "Issues event details ..."
+        run: echo "${{ toJSON(issues) }}"
