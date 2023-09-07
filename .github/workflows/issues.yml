@@ -1,0 +1,10 @@
+name: Issues
+on: 
+  issues:
+    type: [opened, edited, milestoned]
+jobs:
+  info:
+  runs-on: ubuntu-lastest
+  steps:
+    - name: Event Details
+      run: echo "Issues event details ..."
